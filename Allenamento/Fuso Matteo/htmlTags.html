@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico">
+</head>
+
+<body>
+    <div>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>
+            Paragraph Line 1<br>
+            Paragraph Line 2<br>
+            <b>Bold</b>
+            <i>Italic</i>
+            <em>Emphasis</em>
+            <u>Underline</u>
+            <s>Strikethrough</s>
+            <mark>Marked</mark>
+            <sub>Subscript</sub>
+            <sup>Superscript</sup>
+            <small>Small</small>
+        </p>
+    </div>
+    <hr>
+    <!--
+        Comment 
+    -->
+    <div>
+        <a href="https://www.google.com" target="_blank">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Image">
+        </a>
+        <br>
+        <video width="600" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            The browser does not support the video tag.
+        </video>
+        <br>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            The browser does not support the audio tag.
+        </audio>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cifQzyzvFWA?si=Ud0DH1g8hwDH3vxS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+                <th>Heading 4</th>
+            </tr>
+            <tr>
+                <td colspan="2">Row 1 Col 1 and 2</td>
+                <td rowspan="2">Row 1 and 2 Col 3</td>
+                <td>Row 1 Col 4</td>
+            </tr>
+            <tr>
+                <td>Row 2 Col 1</td>
+                <td>Row 2 Col 2</td>
+                <td>Row 2 Col 4</td>
+            </tr>
+        </table>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol type="I">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <dl>
+            <dt>Definition Term 1</dt>
+            <dd>Definition Description 1</dd>
+            <dt>Definition Term 2</dt>
+            <dd>Definition Description 2</dd>
+        </dl>
+    </div>
+    <div>
+        <input type="checkbox" id="myCheckbox">
+        <label for="myCheckbox">Checkbox</label><br>
+        <input type="radio" checked id="radio1" name="group1" value="option1">
+        <label for="radio1">Option 1</label>
+        <input type="radio" id="radio2" name="group1" value="option2">
+        <label for="radio2">Option 2</label><br>
+        <input type="color"><br>
+        <input type="date" value="2023-01-23"><br>
+        <input type="datetime-local" value="2023-01-23T11:30"><br>
+        <input type="month" value="2023-01"><br>
+        <input type="time" value="11:30"><br>
+        <input type="email" placeholder="user@domain.com"><br>
+        <input type="file" accept=".pdf"><br>
+        <input type="number" value="10"><br>
+        <input type="password" placeholder="Password"><br>
+        <input type="range" value="70"><br>
+        <input type="tel" value="+39 123 456 7890"><br>
+        <input type="text" value="Default text"><br>
+        <input type="url" value="https://www.example.com"><br>
+    </div>
+</body>
+
+</html>
