@@ -1,0 +1,82 @@
+.flexContainer
+{
+    display: flex;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+.flexContainer > div
+{
+    background-color: azure;
+    width: 60px;
+    text-align: center;
+    padding: 20px 30px;
+    margin: 10px;
+}
+
+.column
+{
+    flex-direction: column;
+}
+
+.wrap
+{
+    flex-wrap: wrap;
+}
+
+.Jcenter
+{
+    justify-content: center;
+}
+
+.Jend
+{
+    justify-content: end;
+}
+
+.JspaceAround
+{
+    justify-content: space-around;
+}
+
+.JspaceBetween
+{
+    justify-content: space-between;
+}
+
+.Acenter
+{
+    height: 200px;
+    align-items: center;
+}
+
+.Aend
+{
+    height: 200px;
+    align-items: flex-end;
+}
+
+.card
+{
+    width: calc(33% - 20px);
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card > img
+{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card > div
+{
+    padding: 20px;
+}
+
+.flex
+{
+    display: flex;
+    flex-wrap: wrap;
+}
