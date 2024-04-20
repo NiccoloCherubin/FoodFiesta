@@ -45,13 +45,34 @@ function Checksum(CF) {
     return String.fromCharCode(checksum + 65);
 }
 
+function codiceCatastale(provincia, comune) {
+    var xmlHttp = new XMLHttpRequest();
+    const url = "https://axqvoqvbfjpaamphztgd.functions.supabase.co/comuni/provincia/" + provincia + "?nome=" + comune;
+    xmlHttp.open("GET", url, false);
+    xmlHttp.send(null);
+    risultati = JSON.parse(xmlHttp.responseText);
+    for (risultato of risultati) {
+        if (risultato.nome.toLowerCase() == comune.toLowerCase()) {
+            return risultato;
+        }
+    }
+    throw "Comune non trovato";
+}
+
 function CalcolaCF(form) {
     const nascita = ['A', 'B', 'C', 'D', 'E', 'H', 'L', 'M', 'P', 'R', 'S', 'T'];
+    let comuneNascita;
+    try {
+        comuneNascita = codiceCatastale(form.provinciaNascita.value, form.comuneNascita.value);
+    } catch (e) {
+        alert(e);
+        return false;
+    }
     const anagrafica =
     {
         nome: VocaliConsonanti(form.nome.value),
         cognome: VocaliConsonanti(form.cognome.value),
-        luogo_nascita: form.luogoNascita.value,
+        comune_nascita: comuneNascita,
         data_nascita: new Date(form.dataNascita.value),
         sesso: form.sesso.value
     };
@@ -70,7 +91,7 @@ function CalcolaCF(form) {
     } else {
         cf += ("0" + anagrafica.data_nascita.getDate().toString()).slice(-2);
     }
-    cf += anagrafica.luogo_nascita;
+    cf += anagrafica.comune_nascita.codiceCatastale;
     cf = cf.toUpperCase();
     cf += Checksum(cf);
     document.getElementById("cf").innerHTML = "Il codice fiscale è: " + cf;
