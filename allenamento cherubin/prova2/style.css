@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    width: 15%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 6%;
+    border-radius: 2%;
+    box-shadow: 0px 0px 5% rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20%;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 2%;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5%;
+    border: 1% solid #ccc;
+    border-radius: 4%;
+    box-sizing: border-box;
+    margin-bottom: 5.25%;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 2%;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
