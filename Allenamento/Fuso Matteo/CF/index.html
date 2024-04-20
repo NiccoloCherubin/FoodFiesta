@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="input-container">
+        <form id="input-form" onsubmit="return CalcolaCF(this)">
+            <h1>Calcolo codice Fiscale</h1>
+            <label for="nome"><b>Nome</b></label>
+            <input type="text" name="nome" placeholder="Inserire il nome" required value="Massimo">
+
+            <label for="cognome"><b>Cognome</b></label>
+            <input type="text" name="cognome" placeholder="Inserire il cognome" required value="Rossi">
+
+            <label for="dataNascita"><b>Data di nascita</b></label>
+            <input type="date" name="dataNascita" required value="1995-03-01">
+
+            <label for="luogoNascita"><b>Luogo di nascita</b></label>
+            <input type="text" name="luogoNascita" placeholder="Inserire il codice catastale" required value="L985">
+
+            <label><b>Sesso</b></label>
+            <div>
+                <input type="radio" checked name="sesso" id="sessoM" value="Maschio" required>
+                <label for="sessoM">Maschio</label>
+                <input type="radio" name="sesso" id="sessoF" value="Femmina" required>
+                <label for="sessoF">Femmina</label><br>
+            </div>
+            <button type="submit">Calcola Codice Fiscale</button>
+
+        </form>
+    </div>
+    <p id="cf"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>

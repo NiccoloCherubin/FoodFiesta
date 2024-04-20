@@ -1,0 +1,36 @@
+.input-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 60px 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#input-form > label
+{
+    display: inline-block;
+    padding: 7px 5px;
+}
+
+#input-form > input[type="text"], #input-form > input[type="date"]
+{
+    display:block;
+}
+
+#input-form > button
+{
+    margin: 10px;
+    padding: 7px 10px;
+    background-color: rgb(35, 196, 35);
+    border: none;
+}
