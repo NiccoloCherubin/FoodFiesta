@@ -1,0 +1,9 @@
+h1 {
+    color: blue; 
+    font-size: 24px; 
+    font-family: Arial, sans-serif; 
+}
+div {
+    border-style: solid, 3px, gray;
+    padding: 10px;
+}
