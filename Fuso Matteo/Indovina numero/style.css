@@ -1,0 +1,33 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button
+{
+    border-radius: 10px;
+    padding: 5px 10px;
+    border-color: transparent;
+    margin: 0 5px;
+}
+
+input
+{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-color: rgb(230,230,230);
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card
+{
+    padding: 30px 50px;
+    border-radius: 0 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
