@@ -1,0 +1,41 @@
+:root
+{
+    --header-background: #333;
+    --header-elements-background: #555;
+    --header-elements-background-selected: #04AA6D;
+    --header-elements-color: #f2f2f2;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content
+{
+    margin: 0 20px;
+}
+
+nav
+{
+    display: flex;
+    background-color: var(--header-background);
+}
+
+nav > a
+{
+    color: var(--header-elements-color);
+    text-decoration: none;
+    padding: 7px 15px;
+}
+
+nav > a:hover
+{
+    background-color: var(--header-elements-background);
+}
+
+nav > a.active
+{
+    background-color: var(--header-elements-background-selected);
+}
