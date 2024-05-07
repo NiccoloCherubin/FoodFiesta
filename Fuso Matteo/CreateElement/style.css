@@ -1,0 +1,10 @@
+.border-div, .border-child
+{
+    border: 5px solid red;
+    padding: 5px 10px;
+}
+
+.border-child
+{
+    border-color: blue;
+}
