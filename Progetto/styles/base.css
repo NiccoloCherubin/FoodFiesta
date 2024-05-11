@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+
+header>img.logo {
+    height: 100%;
+}
+
+header>.accounting {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+button#login,
+button#register {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button#login {
+    background-color: #04AA6D;
+    color: white;
+    margin-right: 10px;
+}
+
+button#register {
+    background-color: #fff;
+}
+
+/* Navbar */
+nav {
+    top: 100px;
+    position: fixed;
+    display: flex;
+    background-color: #333;
+    width: 100%;
+    height: 40px;
+}
+
+nav>a.nav-item {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 7px 15px;
+}
+
+nav>a.nav-item:hover {
+    background-color: #555;
+}
+
+nav>a.nav-item.active {
+    background-color: #04AA6D;
+}
+
+/* Page Content */
+.content {
+    margin: 0 20px;
+    margin-top: 150px;
+    flex-grow: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    color: #f2f2f2;
+}
