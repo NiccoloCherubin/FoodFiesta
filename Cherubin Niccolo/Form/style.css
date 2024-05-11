@@ -1,0 +1,40 @@
+/* Style the background */
+body {
+    background-color: #f0f0f0; /* light gray background */
+  }
+  
+  /* Style the form */
+  .container {
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the input fields */
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style the button */
+  .login {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Add some hover effect to the button */
+  .login:hover {
+    background-color: #3e8e41;
+  }
