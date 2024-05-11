@@ -1,0 +1,16 @@
+h1 {
+    color: gray;
+}
+input[type = "password"], input[type = "text"], input[type = "submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+.container {
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    border: 5px solid aqua;
+    margin: 15%;
+}
