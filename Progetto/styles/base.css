@@ -35,6 +35,11 @@ button#register {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+button#login,
+button#register:hover{
+    cursor: pointer;
+}
+
 button#login {
     background-color: #04AA6D;
     color: white;
