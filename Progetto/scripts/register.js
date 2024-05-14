@@ -1,6 +1,4 @@
-document.body.querySelector(".sendButton").addEventListener("click", function(event){
-    event.preventDefault();
-
+document.body.querySelector(".sendButton").addEventListener("submit", function(event){
     let input = document.body.querySelectorAll("input");
 
     localStorage.setItem("name",input[0].value);
