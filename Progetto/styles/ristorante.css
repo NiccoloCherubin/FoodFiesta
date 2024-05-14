@@ -1,0 +1,17 @@
+.restaurant-card
+{
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-informations
+{
+    padding: 0 30px;
+}
+
+#restaurant-image
+{
+    height: 400px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
