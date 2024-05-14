@@ -12,6 +12,15 @@ const LoadRegisterPage = function(){
     const top = (screen.height - height) / 2;
     let registerPage = document.open("register.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
 }
+const LoadLoginPage = function(){
+
+    //creazione finestra di login
+    const width = 600;
+    const height = 500;
+    const left = (screen.width - width) / 2;
+    const top = (screen.height - height) / 2;
+    let registerPage = document.open("login.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
+}
 
 const InviaDati = function(){
     localStorage.setItem("name",userName.textContent);
@@ -91,5 +100,6 @@ const loadFooter = function () {
 loadHeader();
 loadNavbar();
 loadFooter();
-//aggiunta evento al bottone login
+//aggiunta evento al bottone register
 register.addEventListener("click",LoadRegisterPage);
+login.addEventListener("click",LoadLoginPage);

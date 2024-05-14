@@ -8,5 +8,5 @@ document.body.querySelector(".sendButton").addEventListener("submit", function(e
 
     window.opener.console.log(`${localStorage.getItem("name")} ${localStorage.getItem("surname")} ${localStorage.getItem("email")} ${localStorage.getItem("password")}`);
 
-    window.close();
+        this.close();
 });
