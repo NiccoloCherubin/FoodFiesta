@@ -14,6 +14,9 @@ document.body.querySelector("form").addEventListener("submit", function(event){
 
         //to do roba che si cancellano bottoni login e registrati da pagina html e da sostituire con icona utente che porta ad una pagina con dati utenti da localStorage
 
+        //GRAPPEGGIA
+        //GRAPPEGGIA
+
 
 
         close();
