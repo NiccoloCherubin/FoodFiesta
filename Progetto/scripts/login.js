@@ -36,7 +36,6 @@ document.body.querySelector("form").addEventListener("submit", function(event){
         //aggiunta del div al documento
         document.body.appendChild(div);
         
-        
         return false;
     }
 });

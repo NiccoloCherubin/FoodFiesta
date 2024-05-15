@@ -9,4 +9,13 @@ document.body.querySelector("form").addEventListener("submit", function(event){
     window.opener.console.log(`${localStorage.getItem("name")} ${localStorage.getItem("surname")} ${localStorage.getItem("email")} ${localStorage.getItem("password")}`);
 
     close();
+
+    window.opener.location.reload();
+
+    let loadRegisterLogin = false;
+
+    // Store the variable in localStorage
+    localStorage.setItem("LoadRegisterLogin", loadRegisterLogin);
+
+    alert("Registrazione effetuata!");
 });

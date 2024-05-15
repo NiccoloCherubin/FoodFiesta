@@ -3,7 +3,7 @@ const pages = {
 }
 
 
-const LoadRegisterPage = function(){
+const LoadRegisterPage = function () {
 
     //creazione finestra di login
     const width = 600;
@@ -12,7 +12,7 @@ const LoadRegisterPage = function(){
     const top = (screen.height - height) / 2;
     let registerPage = document.open("register.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
 }
-const LoadLoginPage = function(){
+const LoadLoginPage = function () {
 
     //creazione finestra di login
     const width = 600;
@@ -22,11 +22,11 @@ const LoadLoginPage = function(){
     let registerPage = document.open("login.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
 }
 
-const InviaDati = function(){
-    localStorage.setItem("name",userName.textContent);
-    localStorage.setItem("surname",userSurname.textContent);
-    localStorage.setItem("email",userEmail.textContent);
-    localStorage.setItem("password",userPassword.textContent);
+const InviaDati = function () {
+    localStorage.setItem("name", userName.textContent);
+    localStorage.setItem("surname", userSurname.textContent);
+    localStorage.setItem("email", userEmail.textContent);
+    localStorage.setItem("password", userPassword.textContent);
     this.close()
 
     /*
@@ -49,21 +49,32 @@ const loadHeader = function () {
     let accounting = document.createElement("div");
     accounting.className = "accounting";
 
-    //bottone login
-    let login = document.createElement("button");
-    login.textContent = "Login";
-    login.id = "login";    
+    //controllo se è stata effettuata la registrazione
+    if (!localStorage.getItem("LoadRegisterLogin")) {
+        //se è stata effettuata la registrazione mostra i dati
+        let profile = document.createElement("button");
+        profile.textContent = localStorage.getItem("name") + " " + localStorage.getItem("surname");
+    }
+    else {
+        //bottone login
+        let login = document.createElement("button");
+        login.textContent = "Login";
+        login.id = "login";
 
-    //bottone register
-    let register = document.createElement("button");
-    register.textContent = "Registrati";
-    register.id = "register";
+        //bottone register
+        let register = document.createElement("button");
+        register.textContent = "Registrati";
+        register.id = "register";
+        //aggiunta bottoni
+        accounting.appendChild(login);
+        accounting.appendChild(register);
+    }
 
-    accounting.appendChild(login);
-    accounting.appendChild(register);
+
+    accounting.appendChild(profile);
     header.appendChild(logo);
     header.appendChild(accounting);
-    document.body.insertBefore(header, document.body.querySelector(".content"));    
+    document.body.insertBefore(header, document.body.querySelector(".content"));
 }
 
 const loadNavbar = function () {
@@ -101,5 +112,5 @@ loadHeader();
 loadNavbar();
 loadFooter();
 //aggiunta evento al bottone register
-register.addEventListener("click",LoadRegisterPage);
-login.addEventListener("click",LoadLoginPage);
+register.addEventListener("click", LoadRegisterPage);
+login.addEventListener("click", LoadLoginPage);
