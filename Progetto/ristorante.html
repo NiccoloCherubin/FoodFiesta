@@ -20,6 +20,17 @@
                 </div>
             </div>
         </div>
+        <br>
+        <h1>Effettua la prenotazione</h1>
+        <form class="input-form">
+            <label for="persone">Numero di persone</label>
+            <input type="number" id="persone" name="persone" min="1" placeholder="3" required>
+            <label for="data">Data e Ora</label>
+            <input type="datetime-local" id="data" name="data" required>
+            <label for="cellulare">Cellulare</label>
+            <input type="text" id="cellulare" name="cellulare" placeholder="+39 000 000 0000" required>
+            <input type="submit" value="Prenota">
+        </form>
     </div>
     <script src="scripts/base.js"></script>
     <script src="scripts/ristorante.js"></script>
