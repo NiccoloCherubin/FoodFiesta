@@ -71,7 +71,7 @@ const loadHeader = function () {
     }
 
 
-    accounting.appendChild(profile);
+    //accounting.appendChild(profile);
     header.appendChild(logo);
     header.appendChild(accounting);
     document.body.insertBefore(header, document.body.querySelector(".content"));
