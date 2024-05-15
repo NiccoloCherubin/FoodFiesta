@@ -1,4 +1,4 @@
-document.body.querySelector(".sendButton").addEventListener("submit", function(event){
+document.body.querySelector("form").addEventListener("submit", function(event){
     let input = document.body.querySelectorAll("input");
 
     localStorage.setItem("name",input[0].value);
@@ -8,5 +8,5 @@ document.body.querySelector(".sendButton").addEventListener("submit", function(e
 
     window.opener.console.log(`${localStorage.getItem("name")} ${localStorage.getItem("surname")} ${localStorage.getItem("email")} ${localStorage.getItem("password")}`);
 
-        this.close();
+    close();
 });

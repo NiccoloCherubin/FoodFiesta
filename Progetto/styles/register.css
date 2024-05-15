@@ -57,4 +57,13 @@ body {
   .sendButton:hover {
     background-color: #3e8e41;
     color: white;
+  }  
+  
+  .error-message {
+    display: none;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
   }
