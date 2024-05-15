@@ -1,12 +1,3 @@
-const loadHiddenNavItem = function () {
-    let navbar = document.querySelector("nav");
-    let item = document.createElement("a");
-    item.href = "ristorante.html";
-    item.textContent = "Ristorante";
-    item.classList = "nav-item active";
-    navbar.appendChild(item);
-}
-
 const ristorante = {
     name: "Pissa e pissa",
     specialization: "Ristorante e pizzeria",
@@ -27,13 +18,27 @@ const ristorante = {
         {
             name: "Servizi",
             value: "Asporto, Cani ammessi"
+        },
+        {
+            name: "Orari",
+            value: "Lun-Dom: 12:00-15:00, 19:00-23:00"
         }
     ]
+}
+
+const loadHiddenNavItem = function () {
+    let navbar = document.querySelector("nav");
+    let item = document.createElement("a");
+    item.href = "ristorante.html";
+    item.textContent = "Ristorante";
+    item.classList = "nav-item active";
+    navbar.appendChild(item);
 }
 
 const loadRestaurantData = function()
 {
     let informations = document.querySelector(".restaurant-informations");
+    document.querySelector("#restaurant-title").textContent = ristorante.name;
     document.querySelector("#restaurant-specialization").textContent = ristorante.specialization;
     document.querySelector("#restaurant-image").src = ristorante.image;
     for (information in ristorante.informations)
@@ -55,3 +60,8 @@ const loadRestaurantData = function()
 
 loadHiddenNavItem();
 loadRestaurantData();
+
+document.querySelector(".input-form").addEventListener("submit", function(event){
+    event.preventDefault();
+    alert("Prenotazione effettuata con successo!")
+});

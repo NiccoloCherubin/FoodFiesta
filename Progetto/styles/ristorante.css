@@ -2,6 +2,10 @@
 {
     display: flex;
     align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    padding: 20px 40px;
+    color: #fff;
 }
 
 .restaurant-informations
@@ -14,4 +18,32 @@
     height: 400px;
     aspect-ratio: 16/9;
     object-fit: cover;
+}
+
+.input-form
+{
+    width: 700px;
+    padding: 30px 50px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-form > input
+{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.input-form > input[type="submit"]
+{
+    background-color: rgb(196, 196, 12);
+    color: white;
+    border: none;
+    font-size: 16px;
 }
