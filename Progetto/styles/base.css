@@ -110,7 +110,12 @@ nav>a.nav-item.active {
     color: #666;
     margin-top: 10px;
   }
-
+  .faq-container {    
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 /* Footer */
 footer {
     background-color: #1f1f1f;
