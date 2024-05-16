@@ -14,6 +14,9 @@ header {
     width: 100%;
     height: 100px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
 }
 
 header>img.logo {
@@ -21,10 +24,7 @@ header>img.logo {
 }
 
 header>.accounting {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 30px;
+    margin-right: 20px;
 }
 
 button#login,
@@ -49,6 +49,20 @@ button#login {
 
 button#register {
     background-color: #fff;
+}
+
+div#profile
+{
+  padding-right: 10px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img#user
+{
+  height: 50px;
 }
 
 /* Navbar */

@@ -7,26 +7,16 @@ document.body.querySelector("form").addEventListener("submit", function(event){
     //verifico che dati siano presenti nel local storage
     if(localStorage.getItem("email") == input[0].value && localStorage.getItem("password") == input[1].value)
     {
-
-
-        //GRAPPEGGIA
-        //GRAPPEGGIA
-
-        //to do roba che si cancellano bottoni login e registrati da pagina html e da sostituire con icona utente che porta ad una pagina con dati utenti da localStorage
-
-        //GRAPPEGGIA
-        //GRAPPEGGIA
-
-
-
+        localStorage.setItem("logged", "true");
+        window.opener.location.reload();
         close();
     }
     else
     {        
-        let div = document.body.createElement("div");
+        let div = document.createElement("div");
         div.className = "error-message";
         
-        let p =document.body.createElement("p");
+        let p =document.createElement("p");
         p.className = "error";
         p.textContent = "Dati inseriti non validi. Assicurarsi di aver inserito i dati correttamente";
         
@@ -36,6 +26,5 @@ document.body.querySelector("form").addEventListener("submit", function(event){
         //aggiunta del div al documento
         document.body.appendChild(div);
         
-        return false;
     }
 });

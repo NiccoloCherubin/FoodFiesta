@@ -22,22 +22,6 @@ const LoadLoginPage = function () {
     let registerPage = document.open("login.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
 }
 
-const InviaDati = function () {
-    localStorage.setItem("name", userName.textContent);
-    localStorage.setItem("surname", userSurname.textContent);
-    localStorage.setItem("email", userEmail.textContent);
-    localStorage.setItem("password", userPassword.textContent);
-    this.close()
-
-    /*
-    console.log(localStorage.getItem("name"));
-    console.log(localStorage.getItem("surname"));
-    console.log(localStorage.getItem("email"));
-    console.log(localStorage.getItem("password"));
-    */
-
-}
-
 const loadHeader = function () {
     let header = document.createElement("header");
 
@@ -50,10 +34,20 @@ const loadHeader = function () {
     accounting.className = "accounting";
 
     //controllo se è stata effettuata la registrazione
-    if (!localStorage.getItem("LoadRegisterLogin")) {
+    if (localStorage.getItem("logged") == "true") {
         //se è stata effettuata la registrazione mostra i dati
-        let profile = document.createElement("button");
-        profile.textContent = localStorage.getItem("name") + " " + localStorage.getItem("surname");
+        let profile = document.createElement("div");
+        
+        let image = document.createElement("img");
+        image.src = "assets/user.png";
+        image.alt = "User";
+        image.id = "user";
+        profile.appendChild(image);
+
+        profile.innerHTML += `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`;
+        profile.id = "profile";
+        accounting.appendChild(profile);
+
     }
     else {
         //bottone login

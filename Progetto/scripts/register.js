@@ -1,4 +1,6 @@
 document.body.querySelector("form").addEventListener("submit", function(event){
+    event.preventDefault();
+    
     let input = document.body.querySelectorAll("input");
 
     localStorage.setItem("name",input[0].value);
@@ -6,16 +8,6 @@ document.body.querySelector("form").addEventListener("submit", function(event){
     localStorage.setItem("email",input[2].value);
     localStorage.setItem("password",input[3].value);
 
-    window.opener.console.log(`${localStorage.getItem("name")} ${localStorage.getItem("surname")} ${localStorage.getItem("email")} ${localStorage.getItem("password")}`);
+    location.href = "login.html";
 
-    close();
-
-    window.opener.location.reload();
-
-    let loadRegisterLogin = false;
-
-    // Store the variable in localStorage
-    localStorage.setItem("LoadRegisterLogin", loadRegisterLogin);
-
-    alert("Registrazione effetuata!");
 });
