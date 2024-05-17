@@ -102,6 +102,33 @@ const loadFooter = function () {
     document.body.appendChild(footer);
 }
 
+let displayError = function(title, message)
+{
+    let errorContainer = document.createElement("div");
+    errorContainer.classList = "errorContainer";
+
+    let error = document.createElement("span");
+    error.classList = "error";
+
+    let titleEl = document.createElement("h2");
+    titleEl.textContent = title;
+
+    let messageEl = document.createElement("p");
+    messageEl.textContent = message;
+
+    let home = document.createElement("a");
+    home.href = "index.html";
+    home.textContent = "Vai alla home";
+    home.classList = "button";
+
+
+    error.appendChild(titleEl);
+    error.appendChild(messageEl);
+    error.appendChild(home);
+    errorContainer.appendChild(error);
+    document.body.querySelector(".content").appendChild(errorContainer);
+}
+
 loadHeader();
 loadNavbar();
 loadFooter();

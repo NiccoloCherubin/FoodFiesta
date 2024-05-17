@@ -1,4 +1,4 @@
-const ristorante = {
+const ristoranti = [{
     name: "Pissa e pissa",
     specialization: "Ristorante e pizzeria",
     stars: 4.5,
@@ -25,7 +25,7 @@ const ristorante = {
             value: "Lun-Dom: 12:00-15:00, 19:00-23:00"
         }
     ]
-}
+}];
 
 const loadHiddenNavItem = function () {
     let navbar = document.querySelector("nav");
@@ -36,34 +36,48 @@ const loadHiddenNavItem = function () {
     navbar.appendChild(item);
 }
 
-const loadRestaurantData = function()
+const loadRestaurantData = function(restaurant)
 {
     let informations = document.querySelector(".restaurant-informations");
-    document.querySelector("#restaurant-title").textContent = ristorante.name;
-    document.querySelector("#restaurant-specialization").textContent = ristorante.specialization;
-    document.querySelector("#restaurant-image").src = ristorante.image;
-    document.querySelector("#stars").style.width = ristorante.stars * 20 + "px";
-    for (information in ristorante.informations)
+    document.querySelector("#restaurant-title").textContent = restaurant.name;
+    document.querySelector("#restaurant-specialization").textContent = restaurant.specialization;
+    document.querySelector("#restaurant-image").src = restaurant.image;
+    document.querySelector("#stars").style.width = restaurant.stars * 20 + "px";
+    for (information in restaurant.informations)
     {
         let item = document.createElement("div");
         item.classList = "restaurant-information";
 
         let title = document.createElement("h3");
-        title.textContent = ristorante.informations[information].name;
+        title.textContent = restaurant.informations[information].name;
         item.appendChild(title);
 
         let content = document.createElement("p");
-        content.textContent = ristorante.informations[information].value;
+        content.textContent = restaurant.informations[information].value;
         item.appendChild(content);
         
         informations.appendChild(item);
     }
 }
 
-loadHiddenNavItem();
-loadRestaurantData();
+//localStorage.setItem("restautantIndex", 0);
 
-document.querySelector(".input-form").addEventListener("submit", function(event){
-    event.preventDefault();
-    alert("Prenotazione effettuata con successo!")
-});
+if (localStorage.getItem("logged") == "true")
+{
+    if (localStorage.getItem("restautantIndex") != null)
+    {
+        loadHiddenNavItem();
+        loadRestaurantData(ristoranti[localStorage.getItem("restautantIndex")]);
+        document.querySelector(".input-form").addEventListener("submit", function(event){
+            event.preventDefault();
+            alert("Prenotazione effettuata con successo!")
+        });
+    }
+    else 
+    {
+        displayError("Nessun ristorante selezionato", "Per visualizzare questa pagina devi selezionare un ristorante.");
+    }
+} else
+{
+    displayError("Non sei autenticato", "Per visualizzare questa pagina devi essere autenticato.");
+}
