@@ -10,13 +10,17 @@
 </head>
 <body>
     <div class="content">
-        <h1 id="restaurant-title">Nome del ristorante</h1>
+        <h1 id="restaurant-title"></h1>
         <div class="restaurant-card">
             <img src="assets/imagePlaceholder.png" alt="Immagine del ristorante" id="restaurant-image">
             <div class="restaurant-informations">
                 <div class="restaurant-information">
                     <h3>Specializzazione</h3>
-                    <p id="restaurant-specialization">Specializzazione del ristorante</p>
+                    <p id="restaurant-specialization"></p>
+                </div>
+                <div class="restaurant-information">
+                    <h3>Valutazione</h3>
+                    <div id="stars"></div>
                 </div>
             </div>
         </div>
@@ -24,7 +28,7 @@
         <h1>Effettua la prenotazione</h1>
         <form class="input-form">
             <label for="persone">Numero di persone</label>
-            <input type="number" id="persone" name="persone" min="1" placeholder="3" required>
+            <input type="number" id="persone" name="persone" min="1" max="20" placeholder="3" required>
             <label for="data">Data e Ora</label>
             <input type="datetime-local" id="data" name="data" required>
             <label for="cellulare">Cellulare</label>

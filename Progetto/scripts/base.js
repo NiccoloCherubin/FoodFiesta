@@ -106,5 +106,8 @@ loadHeader();
 loadNavbar();
 loadFooter();
 //aggiunta evento al bottone register
-register.addEventListener("click", LoadRegisterPage);
-login.addEventListener("click", LoadLoginPage);
+if (localStorage.getItem("logged") != "true")
+{
+    register.addEventListener("click", LoadRegisterPage);
+    login.addEventListener("click", LoadLoginPage);
+}

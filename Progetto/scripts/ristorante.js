@@ -1,6 +1,7 @@
 const ristorante = {
     name: "Pissa e pissa",
     specialization: "Ristorante e pizzeria",
+    stars: 4.5,
     image: "https://lh3.googleusercontent.com/p/AF1QipOgRT3q3I2TC-75hProq6sCiVEPdG6LIPEcf0ua=s680-w680-h510",
     informations: [
         {
@@ -41,6 +42,7 @@ const loadRestaurantData = function()
     document.querySelector("#restaurant-title").textContent = ristorante.name;
     document.querySelector("#restaurant-specialization").textContent = ristorante.specialization;
     document.querySelector("#restaurant-image").src = ristorante.image;
+    document.querySelector("#stars").style.width = ristorante.stars * 20 + "px";
     for (information in ristorante.informations)
     {
         let item = document.createElement("div");
