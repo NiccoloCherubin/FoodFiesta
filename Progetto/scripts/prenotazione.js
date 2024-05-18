@@ -32,8 +32,6 @@ const loadRestaurantData = function(restaurant)
     }
 }
 
-//localStorage.setItem("restautantIndex", 0);
-
 if (localStorage.getItem("logged") == "true")
 {
     if (localStorage.getItem("restautantIndex") != null)

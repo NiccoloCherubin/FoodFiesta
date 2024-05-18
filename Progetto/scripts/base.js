@@ -46,7 +46,11 @@ const loadHeader = function () {
         image.id = "user";
         profile.appendChild(image);
 
-        profile.innerHTML += `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`;
+        profile.innerHTML += `<span>${localStorage.getItem("name")} ${localStorage.getItem("surname")}</span>`;
+        profile.innerHTML += `
+            <div class="dropdown">
+                <button id="logout">Logout</button>
+            </div>`
         profile.id = "profile";
         accounting.appendChild(profile);
 
