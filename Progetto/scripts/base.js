@@ -1,5 +1,7 @@
 const pages = {
     "Home": "index.html",
+    "Ristoranti" : "listaRistoranti.html",
+    "Faq" : "faq.html",
 }
 
 
@@ -7,19 +9,19 @@ const LoadRegisterPage = function () {
 
     //creazione finestra di login
     const width = 600;
-    const height = 500;
+    const height = 700;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
-    let registerPage = document.open("register.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
+    let registerPage = document.open("register.html", "", `width = ${width},height = ${height}, left = ${left}, top = ${top}`);
 }
 const LoadLoginPage = function () {
 
     //creazione finestra di login
     const width = 600;
-    const height = 500;
+    const height = 700;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
-    let registerPage = document.open("login.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
+    let registerPage = document.open("login.html", "", `width = ${width},height = ${height}, left = ${left}, top = ${top}`);
 }
 
 const loadHeader = function () {
@@ -37,6 +39,7 @@ const loadHeader = function () {
     if (localStorage.getItem("logged") == "true") {
         //se è stata effettuata la registrazione mostra i dati
         let profile = document.createElement("div");
+        profile.id = "profile";
         
         let image = document.createElement("img");
         image.src = "assets/user.png";
@@ -44,10 +47,21 @@ const loadHeader = function () {
         image.id = "user";
         profile.appendChild(image);
 
-        profile.innerHTML += `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`;
-        profile.id = "profile";
-        accounting.appendChild(profile);
+        let user = document.createElement("span");
+        user.textContent = `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`;
 
+        let dropdown = document.createElement("div");
+        dropdown.classList = "dropdown";
+
+        let logout = document.createElement("button");
+        logout.textContent = "Logout";
+        logout.id = "logout";
+
+        
+        dropdown.appendChild(logout);
+        profile.appendChild(user);
+        profile.appendChild(dropdown);
+        accounting.appendChild(profile);
     }
     else {
         //bottone login
@@ -65,7 +79,6 @@ const loadHeader = function () {
     }
 
 
-    //accounting.appendChild(profile);
     header.appendChild(logo);
     header.appendChild(accounting);
     document.body.insertBefore(header, document.body.querySelector(".content"));
@@ -102,9 +115,46 @@ const loadFooter = function () {
     document.body.appendChild(footer);
 }
 
+let displayError = function(title, message)
+{
+    let errorContainer = document.createElement("div");
+    errorContainer.classList = "errorContainer";
+
+    let error = document.createElement("span");
+    error.classList = "error";
+
+    let titleEl = document.createElement("h2");
+    titleEl.textContent = title;
+
+    let messageEl = document.createElement("p");
+    messageEl.textContent = message;
+
+    let home = document.createElement("a");
+    home.href = "index.html";
+    home.textContent = "Vai alla home";
+    home.classList = "button";
+
+
+    error.appendChild(titleEl);
+    error.appendChild(messageEl);
+    error.appendChild(home);
+    errorContainer.appendChild(error);
+    document.body.insertBefore(errorContainer, document.body.querySelector("footer"));
+}
+
 loadHeader();
 loadNavbar();
 loadFooter();
 //aggiunta evento al bottone register
-register.addEventListener("click", LoadRegisterPage);
-login.addEventListener("click", LoadLoginPage);
+if (localStorage.getItem("logged") != "true")
+{
+    register.addEventListener("click", LoadRegisterPage);
+    login.addEventListener("click", LoadLoginPage);
+}
+else 
+{
+    document.querySelector("#logout").addEventListener("click", function () {
+        localStorage.setItem("logged", "false");
+        location.reload();
+    });
+}
