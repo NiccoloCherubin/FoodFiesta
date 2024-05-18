@@ -20,3 +20,4 @@ function displayRestaurants(restaurants) {
         container.appendChild(restaurantElement);
     });
 }
+displayRestaurants(ristoranti);

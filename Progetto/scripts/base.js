@@ -1,5 +1,6 @@
 const pages = {
     "Home": "index.html",
+    "Ristoranti" : "listaRistoranti.html",
     "Faq" : "faq.html",
 }
 
