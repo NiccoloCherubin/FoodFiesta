@@ -1,9 +1,3 @@
-// Importo i dati dei ristoranti, richiede NodeJs
-//import { jsonData } from './datiRistoranti.js';
-
-// Converto la stringa dati json in oggetti js
-//const ristoranti = JSON.parse(jsonData);
-
 // Dati dei ristoranti
 const ristoranti = [
     {
