@@ -142,6 +142,16 @@ let displayError = function(title, message)
     document.body.insertBefore(errorContainer, document.body.querySelector("footer"));
 }
 
+const loadHiddenNavItem = function (text, link) {
+    let navitems = document.querySelectorAll(".nav-item");
+    let navbar = document.querySelector("nav");
+    let item = document.createElement("a");
+    item.href = link;
+    item.textContent = text;
+    item.classList = "nav-item active";
+    navbar.insertBefore(item, navitems[navitems.length - 1]);
+}
+
 loadHeader();
 loadNavbar();
 loadFooter();

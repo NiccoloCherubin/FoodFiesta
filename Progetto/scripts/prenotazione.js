@@ -1,13 +1,3 @@
-const loadHiddenNavItem = function () {
-    let navitems = document.querySelectorAll(".nav-item");
-    let navbar = document.querySelector("nav");
-    let item = document.createElement("a");
-    item.href = "prenotazione.html";
-    item.textContent = "Prenotazione";
-    item.classList = "nav-item active";
-    navbar.insertBefore(item, navitems[navitems.length - 1]);
-}
-
 const loadRestaurantData = function(restaurant)
 {
     let informations = document.querySelector(".restaurant-informations");
@@ -38,10 +28,6 @@ if (localStorage.getItem("logged") == "true")
     {
         loadHiddenNavItem();
         loadRestaurantData(ristoranti[localStorage.getItem("restautantIndex")]);
-        document.querySelector(".input-form").addEventListener("submit", function(event){
-            event.preventDefault();
-            alert("Prenotazione effettuata con successo!")
-        });
     }
     else 
     {
