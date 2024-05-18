@@ -1,7 +1,7 @@
 let currentRestaurant = 0;
 
 const creazione = function(){
-    let div = document.body.querySelector(".image-container");
+    let div = document.body.querySelector(".contenitore-immagini");
 
     let section = document.createElement("section");
     section.id = `ristorante-${currentRestaurant}`;
@@ -12,21 +12,13 @@ const creazione = function(){
     let immagine = document.createElement("img");
     immagine.src = ristoranti[currentRestaurant].image;
 
+    let a = document.createElement("a");
+    a.href ="listaRistoranti.html";
 
-    let specializzazione = document.createElement("p");
-    specializzazione.textContent = `Spcecializzazione:${ristoranti[currentRestaurant].specialization}`;
-
-    let stasrs = document.createElement("p");
-    stasrs.textContent = `Stelle:${ristoranti[currentRestaurant].stars}`;
-
-    let informazioni = document.createElement("p");
-    informazioni.textContent = `Informazioni:${ristoranti[currentRestaurant].informations}`;
+    a.append(immagine);
 
     section.appendChild(titolo);
-    section.appendChild(immagine);
-    section.appendChild(specializzazione);
-    section.appendChild(stasrs);
-    section.appendChild(informazioni);
+    section.appendChild(a);    
 
     div.appendChild(section);
 }
