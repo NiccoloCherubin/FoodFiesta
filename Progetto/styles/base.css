@@ -147,41 +147,7 @@ nav>a.nav-item.active {
     color: #666;
     margin-top: 10px;
   }
-  .faq-container {    
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .faq-question {
-    margin-bottom: 10px;
-  }
-  
-  .faq-question h3 {
-    display: inline-block;
-    margin-right: 10px;
-    color: #333;
-  }
-  
-  .faq-question span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 20px;
-    font-size: 14px;
-    vertical-align: middle;
-  }  
-  .faq-question p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-left: 10px;
-  }
+
 /* Footer */
 footer {
     background-color: #1f1f1f;
