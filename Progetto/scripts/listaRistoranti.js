@@ -95,8 +95,3 @@ function displayRestaurants(restaurants) {
         container.appendChild(restaurantElement);
     });
 }
-
-// Si verifica quando tutti gli elementi HTML sono stati caricati
-document.addEventListener('DOMContentLoaded', () => {
-    displayRestaurants(ristoranti);
-});

@@ -1,5 +1,5 @@
 // salvo i dati come se fossero in json, li gestisco come se fossero in un file json
-const jsonRestaurants = `[
+const jsonRestaurants = [
     {
         "name": "Pissa e pissa",
         "specialization": "Ristorante e pizzeria",
@@ -39,6 +39,4 @@ const jsonRestaurants = `[
             { "name": "Orari", "value": "Mar-Dom: 12:00-15:00, 19:00-23:00" }
         ]
     }
-]`;
-
-export { jsonData };
+];
