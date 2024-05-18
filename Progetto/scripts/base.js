@@ -39,6 +39,7 @@ const loadHeader = function () {
     if (localStorage.getItem("logged") == "true") {
         //se è stata effettuata la registrazione mostra i dati
         let profile = document.createElement("div");
+        profile.id = "profile";
         
         let image = document.createElement("img");
         image.src = "assets/user.png";
@@ -46,14 +47,21 @@ const loadHeader = function () {
         image.id = "user";
         profile.appendChild(image);
 
-        profile.innerHTML += `<span>${localStorage.getItem("name")} ${localStorage.getItem("surname")}</span>`;
-        profile.innerHTML += `
-            <div class="dropdown">
-                <button id="logout">Logout</button>
-            </div>`
-        profile.id = "profile";
-        accounting.appendChild(profile);
+        let user = document.createElement("span");
+        user.textContent = `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`;
 
+        let dropdown = document.createElement("div");
+        dropdown.classList = "dropdown";
+
+        let logout = document.createElement("button");
+        logout.textContent = "Logout";
+        logout.id = "logout";
+
+        
+        dropdown.appendChild(logout);
+        profile.appendChild(user);
+        profile.appendChild(dropdown);
+        accounting.appendChild(profile);
     }
     else {
         //bottone login
@@ -131,7 +139,7 @@ let displayError = function(title, message)
     error.appendChild(messageEl);
     error.appendChild(home);
     errorContainer.appendChild(error);
-    document.body.querySelector(".content").appendChild(errorContainer);
+    document.body.insertBefore(errorContainer, document.body.querySelector("footer"));
 }
 
 loadHeader();
@@ -142,4 +150,11 @@ if (localStorage.getItem("logged") != "true")
 {
     register.addEventListener("click", LoadRegisterPage);
     login.addEventListener("click", LoadLoginPage);
+}
+else 
+{
+    document.querySelector("#logout").addEventListener("click", function () {
+        localStorage.setItem("logged", "false");
+        location.reload();
+    });
 }
