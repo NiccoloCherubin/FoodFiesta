@@ -1,0 +1,38 @@
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card
+{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid gray;
+    margin: 10px;
+    width: 355.547px;
+}
+
+.card > img
+{
+    height: 200px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card > p
+{
+    padding: 10px 20px;
+    text-overflow: ellipsis;
+}
