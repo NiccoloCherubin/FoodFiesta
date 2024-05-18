@@ -32,6 +32,17 @@ section {
     margin: 0;
 }
 
+.ristorante-mese{
+    display: flex;
+    margin: auto;
+
+}
+.ristorante-mese img{
+    display: flex;
+    margin: auto;
+    opacity: 0.1;
+}
+
 #next {
     background-color: #4CAF50;
     color: #fff;

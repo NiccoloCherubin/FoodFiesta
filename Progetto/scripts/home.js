@@ -44,5 +44,15 @@ document.body.querySelector("#next").addEventListener('click', () => {
     showRestaurant(currentRestaurant);
 });
 
+let divRistoranteMese = document.body.querySelector("ristorante-mese");
+
+
+let imgRistoranteMese = document.createElement("img");
+
+//calcolo in modo randomatico il ristorante del mese
+imgRistoranteMese.src = ristoranti[0].image;
+
+divRistoranteMese.appendChild(imgRistoranteMese);
 
 showRestaurant(currentRestaurant);
+
