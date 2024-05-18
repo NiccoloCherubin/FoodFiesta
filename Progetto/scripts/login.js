@@ -8,7 +8,7 @@ document.body.querySelector("form").addEventListener("submit", function(event){
     if(localStorage.getItem("email") == input[0].value && localStorage.getItem("password") == input[1].value)
     {
         localStorage.setItem("logged", "true");
-        window.opener.location.reload();
+        window.opener.location.href = "index.html";
         close();
     }
     else

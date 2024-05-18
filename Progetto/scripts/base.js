@@ -9,19 +9,19 @@ const LoadRegisterPage = function () {
 
     //creazione finestra di login
     const width = 600;
-    const height = 500;
+    const height = 700;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
-    let registerPage = document.open("register.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
+    let registerPage = document.open("register.html", "", `width = ${width},height = ${height}, left = ${left}, top = ${top}`);
 }
 const LoadLoginPage = function () {
 
     //creazione finestra di login
     const width = 600;
-    const height = 500;
+    const height = 700;
     const left = (screen.width - width) / 2;
     const top = (screen.height - height) / 2;
-    let registerPage = document.open("login.html", "", "width = " + width + ",height = " + height + ",left = " + left + ",top = " + top);
+    let registerPage = document.open("login.html", "", `width = ${width},height = ${height}, left = ${left}, top = ${top}`);
 }
 
 const loadHeader = function () {
