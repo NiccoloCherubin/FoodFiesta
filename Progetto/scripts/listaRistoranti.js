@@ -31,7 +31,7 @@ function displayRestaurants(restaurants) {
     // Gestore di eventi click per i bottoni di prenotazione
     const button = restaurantElement.querySelector('.bookButton');
     button.addEventListener('click', () => {
-      localStorage.setItem('selectedRestaurantIndex', index);
+      localStorage.setItem('restaurantIndex', index);
       //alert(`Ristorante selezionato: ${restaurant.name}`);
       location.href = 'prenotazione.html';
     });

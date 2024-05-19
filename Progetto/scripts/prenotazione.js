@@ -29,8 +29,8 @@ loadHiddenNavItem("Prenotazione", "prenotazione.html");
 // Controllo se l'utente è autenticato
 if (localStorage.getItem("logged") == "true") {
     // Controllo se è stato selezionato un ristorante
-    if (localStorage.getItem("restautantIndex") != null) {
-        loadRestaurantData(ristoranti[localStorage.getItem("restautantIndex")])
+    if (localStorage.getItem('restaurantIndex') != null) {
+        loadRestaurantData(ristoranti[localStorage.getItem("restaurantIndex")])
     }
     else {
         displayError("Nessun ristorante selezionato", "Per visualizzare questa pagina devi selezionare un ristorante.");
