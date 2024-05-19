@@ -64,5 +64,57 @@ const ristoranti = [
             { "name": "Servizi", "value": "Asporto, Posti a sedere" },
             { "name": "Orari", "value": "Lun-Dom: 12:00-23:00" }
         ]
+    },
+    {
+        "name": "Osteria del Mare",
+        "specialization": "Ristorante di pesce",
+        "stars": 4.6,
+        "image": "https://www.bcoolguide.com/wp-content/uploads/coste/molo_22.jpg",
+        "informations": [
+            { "name": "Indirizzo", "value": "Via del Porto, 10 - 60100 Ancona" },
+            { "name": "Numero di telefono", "value": "+39 678 678 6789" },
+            { "name": "Specializzazione", "value": "Pesce fresco e frutti di mare" },
+            { "name": "Servizi", "value": "Terrazza panoramica, Prenotazioni" },
+            { "name": "Orari", "value": "Mar-Dom: 12:00-15:00, 19:00-23:00" }
+        ]
+    },
+    {
+        "name": "La Cantina",
+        "specialization": "Enoteca e ristorante",
+        "stars": 4.3,
+        "image": "https://le-strade.com/wp-content/uploads/2022/11/20221123-La-Botte-002-min.jpg",
+        "informations": [
+            { "name": "Indirizzo", "value": "Via delle Vigne, 20 - 80100 Napoli" },
+            { "name": "Numero di telefono", "value": "+39 789 789 7890" },
+            { "name": "Specializzazione", "value": "Vini pregiati e piatti gourmet" },
+            { "name": "Servizi", "value": "Degustazioni, Parcheggio" },
+            { "name": "Orari", "value": "Lun-Sab: 18:00-23:00" }
+        ]
+    },
+    {
+        "name": "Trattoria Toscana",
+        "specialization": "Cucina toscana",
+        "stars": 4.5,
+        "image": "https://static.gamberorosso.it/2020/06/toscana-casale.jpg",
+        "informations": [
+            { "name": "Indirizzo", "value": "Via Firenze, 25 - 50100 Firenze" },
+            { "name": "Numero di telefono", "value": "+39 890 890 8901" },
+            { "name": "Specializzazione", "value": "Cucina tipica toscana" },
+            { "name": "Servizi", "value": "Tavoli all'aperto, Accoglienza gruppi" },
+            { "name": "Orari", "value": "Lun-Dom: 12:00-15:00, 19:00-22:30" }
+        ]
+    },
+    {
+        "name": "Bistro Francese",
+        "specialization": "Cucina francese",
+        "stars": 4.7,
+        "image": "https://static.gamberorosso.it/media/k2/items/src/6312f58c7a7cbaa51484f9ea085b4e32.jpg",
+        "informations": [
+            { "name": "Indirizzo", "value": "Piazza Parigi, 3 - 00100 Roma" },
+            { "name": "Numero di telefono", "value": "+39 901 901 9012" },
+            { "name": "Specializzazione", "value": "Cucina gourmet francese" },
+            { "name": "Servizi", "value": "Prenotazioni, Menù degustazione" },
+            { "name": "Orari", "value": "Mar-Sab: 12:00-14:30, 19:00-22:30" }
+        ]
     }
 ];

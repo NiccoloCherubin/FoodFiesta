@@ -32,7 +32,8 @@ function displayRestaurants(restaurants) {
     const button = restaurantElement.querySelector('.bookButton');
     button.addEventListener('click', () => {
       localStorage.setItem('selectedRestaurantIndex', index);
-      alert(`Ristorante selezionato: ${restaurant.name}`);
+      //alert(`Ristorante selezionato: ${restaurant.name}`);
+      location.href = 'prenotazione.html';
     });
   });
 }
