@@ -42,12 +42,12 @@ loadHiddenNavItem("Ringraziamenti", location.href);
 // Controllo se l'utente è autenticato
 if (localStorage.getItem("logged") == "true") {
     // Controllo se è stato selezionato un ristorante
-    if (localStorage.getItem("restautantIndex") != null) {
+    if (localStorage.getItem("restaurantIndex") != null) {
         let parameters = getParameters();
         // Controllo se sono stati passati i parametri necessari
         if ("data" in parameters && "persone" in parameters && "cellulare" in parameters) {
             // Preparo i dati per la tabella e la inserisco
-            let restaurant = ristoranti[localStorage.getItem("restautantIndex")];
+            let restaurant = ristoranti[localStorage.getItem("restaurantIndex")];
             let date = new Date(parameters["data"]);
             loadData({
                 "Nome": `${localStorage.getItem("name")} ${localStorage.getItem("surname")}`,
