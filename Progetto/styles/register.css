@@ -34,8 +34,7 @@ body {
   }
   
   input[type="text"],
-  input[type="password"],
-  input[type="email"] {
+  input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -61,6 +60,16 @@ body {
   }  
   
   .error {
-    color: red;
+    background-color: rgb(218, 67, 67);
     font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
   }
+
+#error-container
+{
+    position: fixed;
+    top: 0;
+    left: 20px;
+}

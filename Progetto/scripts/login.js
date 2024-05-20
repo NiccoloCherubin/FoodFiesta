@@ -13,18 +13,14 @@ document.body.querySelector("form").addEventListener("submit", function(event){
     }
     else
     {        
-        let div = document.createElement("div");
-        div.className = "error-message";
-        
         let p =document.createElement("p");
         p.className = "error";
         p.textContent = "Dati inseriti non validi. Assicurarsi di aver inserito i dati correttamente";
         
         //aggiunta del p al div
-        div.appendChild(p);
-        
-        //aggiunta del div al documento
-        document.body.appendChild(div);
-        
+        document.querySelector("#error-container").appendChild(p);
+        setTimeout(function() {
+            p.remove();
+        }, 1500);
     }
 });
