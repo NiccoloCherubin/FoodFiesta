@@ -53,21 +53,27 @@ const ristoranteMese = function(){
     var divRistoranteMese = document.body.querySelector("#ristorante-mese");
 
     //calcolo dell'indice casuale con il random
-    let indiceCasuale = Math.floor(Math.random() * ristoranti.length);
+    var indiceCasuale = Math.floor(Math.random() * ristoranti.length);
 
     var titolo = document.createElement("h2");
     titolo.textContent = ristoranti[indiceCasuale].name;
     
     var imgRistoranteMese = document.createElement("img");
-    
+    imgRistoranteMese.id="rMese";
     //calcolo in modo randomatico il ristorante del mese
     imgRistoranteMese.src = ristoranti[indiceCasuale].image;
     
+    
     divRistoranteMese.appendChild(titolo);
     divRistoranteMese.appendChild(imgRistoranteMese);
-    
-    showRestaurant(currentRestaurant);
 
+    const img = document.body.querySelector('#rMese');
+    img.addEventListener('click', () => {
+      localStorage.setItem('restaurantIndex', indiceCasuale);
+      //alert(`Ristorante selezionato: ${restaurant.name}`);
+      location.href = 'prenotazione.html';
+    }
+    );
 }
 ristoranteMese();
 
