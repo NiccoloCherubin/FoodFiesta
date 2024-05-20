@@ -1,17 +1,22 @@
 let currentRestaurant = 0;
 
+//creazione carasoul di ristoranti
 const creazione = function(){
     let div = document.body.querySelector(".contenitore-immagini");
 
+    //sezione che conterrà immagini e titolo
     let section = document.createElement("section");
     section.id = `ristorante-${currentRestaurant}`;
 
+    //titolo
     let titolo = document.createElement("h2");
     titolo.textContent = ristoranti[currentRestaurant].name;
 
+    //immagine
     let immagine = document.createElement("img");
     immagine.src = ristoranti[currentRestaurant].image;
 
+    //link che porta alla lista dei ristoranti
     let a = document.createElement("a");
     a.href ="listaRistoranti.html";
 
@@ -44,15 +49,19 @@ document.body.querySelector("#next").addEventListener('click', () => {
     showRestaurant(currentRestaurant);
 });
 
-let divRistoranteMese = document.body.querySelector("ristorante-mese");
+const ristoranteMese = function(){
+    let divRistoranteMese = document.body.querySelector("ristorante-mese");
+    
+    
+    let imgRistoranteMese = document.createElement("img");
+    
+    //calcolo in modo randomatico il ristorante del mese
+    imgRistoranteMese.src = ristoranti[1].image;
+    
+    divRistoranteMese.appendChild(imgRistoranteMese);
+    
+    showRestaurant(currentRestaurant);
 
-
-let imgRistoranteMese = document.createElement("img");
-
-//calcolo in modo randomatico il ristorante del mese
-imgRistoranteMese.src = ristoranti[0].image;
-
-divRistoranteMese.appendChild(imgRistoranteMese);
-
-showRestaurant(currentRestaurant);
+}
+ristoranteMese();
 
