@@ -1,3 +1,4 @@
+/* Tabella di conferma dati */
 table, th, tr, td
 {
     padding: 5px 10px;
@@ -12,8 +13,10 @@ table
 th
 {
     text-align: left;
+    width: 200px;
 }
 
+/* Coloro righe in maniera pari, prendo le righe dispari*/
 tr:nth-child(odd) {
     background-color: #ead42b;
 }

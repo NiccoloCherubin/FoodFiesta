@@ -1,3 +1,4 @@
+/* Card ristorante */
 .restaurant-card
 {
     display: flex;
@@ -23,6 +24,7 @@
     border-radius: 20px;
 }
 
+/* Form prenotazione */
 .input-form
 {
     width: 700px;
@@ -51,6 +53,10 @@
     font-size: 16px;
 }
 
+/* 
+    Le stelle vengono caricate tramite un div a larghezza variabile
+    questo contiene un immagine di sfondo che si ripete tante volte quanto la lunghezza glielo permette
+*/
 #stars
 {
     height: 20px;

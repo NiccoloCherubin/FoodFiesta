@@ -11,9 +11,12 @@
 <body>
     <div class="content">
         <h1 id="restaurant-title"></h1>
+        <!-- Carta che contiene i dati del ristorante selezionato -->
         <div class="restaurant-card">
             <img src="assets/ristoranti/placeholder.jpg" alt="Immagine del ristorante" id="restaurant-image">
+            <!-- Contenitore informazioni -->
             <div class="restaurant-informations">
+                <!-- Placeholder informazioni base -->
                 <div class="restaurant-information">
                     <h3>Specializzazione</h3>
                     <p id="restaurant-specialization">Specializzazione ristorante</p>
@@ -22,10 +25,12 @@
                     <h3>Valutazione</h3>
                     <div id="stars"></div>
                 </div>
+                <!-- Caricamento dinamico informazioni aggiuntive -->
             </div>
         </div>
         <br>
         <h1>Effettua la prenotazione</h1>
+        <!-- Form di prenotazione, che reindirizza alla pagina di ringraziamenti -->
         <form class="input-form" action="ringraziamenti.html">
             <label for="persone">Numero di persone</label>
             <input type="number" id="persone" name="persone" min="1" max="20" placeholder="3" required>

@@ -197,6 +197,7 @@ if (localStorage.getItem("logged") != "true") {
     login.addEventListener("click", LoadLoginPage);
 }
 else {
+    // Aggiunto evento al bottone di logout
     document.querySelector("#logout").addEventListener("click", function () {
         localStorage.setItem("logged", "false");
         location.reload();

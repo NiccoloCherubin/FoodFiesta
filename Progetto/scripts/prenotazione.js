@@ -30,6 +30,7 @@ loadHiddenNavItem("Prenotazione", "prenotazione.html");
 if (localStorage.getItem("logged") == "true") {
     // Controllo se è stato selezionato un ristorante
     if (localStorage.getItem('restaurantIndex') != null) {
+        // Carico i dati del ristorante
         loadRestaurantData(ristoranti[localStorage.getItem("restaurantIndex")])
     }
     else {
