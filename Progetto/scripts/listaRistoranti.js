@@ -21,7 +21,7 @@ function displayRestaurants(restaurants) {
                       )
                       .join("")}
                 </ul>
-                <input type="submit" value="Prenota" class="bookButton">
+                <input type="submit" value="Prenota" class="button">
             </div>
         </div>
         `;
@@ -29,7 +29,7 @@ function displayRestaurants(restaurants) {
     container.appendChild(restaurantElement);
 
     // Gestore di eventi click per i bottoni di prenotazione
-    const button = restaurantElement.querySelector('.bookButton');
+    const button = restaurantElement.querySelector('.button');
     button.addEventListener('click', () => {
       localStorage.setItem('restaurantIndex', index);
       //alert(`Ristorante selezionato: ${restaurant.name}`);

@@ -119,33 +119,46 @@ nav>a.nav-item.active {
     z-index: 0;
 }
 
-.image-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .image-container {
+.card
+{
+    box-shadow: 10px 10px 5px #aaaaaa;
+    border: 1px solid gray;
     margin: 10px;
-  }
-  
-  .image-container img {
-    width: 200px;
-    height: 250px;
+    width: 500px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between;
+    padding-bottom: 20px; 
+    box-sizing: border-box;
+}
+
+.card > img
+{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 10px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
   }
   
-  .image-container p {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
+  .button:hover {
+    background-color: #3e8e41;
   }
 
 /* Footer */
@@ -184,15 +197,4 @@ footer {
     text-align: center;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button
-{
-    background-color: rgb(112, 242, 125);
-    color: white;
-    font-size: 1.1em;
-    text-decoration: none;
-    margin: 10px;
-    padding: 10px 20px;
-    border-radius: 30px;
 }

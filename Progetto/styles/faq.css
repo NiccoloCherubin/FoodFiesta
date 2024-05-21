@@ -33,3 +33,32 @@
     line-height: 1.5;
     margin-left: 10px;
   }
+
+  .image-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    margin: 10px;
+  }
+  
+  .image-container img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .image-container p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+  }
